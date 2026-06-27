@@ -1,6 +1,9 @@
 {
   "name": "@blinkorb/eslint-config",
   "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A collection of BlinkOrb's ESLint configs",
   "exports": {
     "./base": "./src/base.ts",
