@@ -1,7 +1,7 @@
 declare module 'eslint-config-expo/flat' {
-  import { Config } from 'eslint/config';
+  import { Linter } from 'eslint';
 
-  const config: Config;
+  const config: Linter.Config;
 
   export default config;
 }

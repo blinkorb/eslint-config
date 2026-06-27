@@ -1,3 +1,5 @@
+import './@types/eslint-config-expo';
+
 import { defineConfig } from 'eslint/config';
 import expoConfig from 'eslint-config-expo/flat';
 
