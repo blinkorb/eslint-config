@@ -1,0 +1,26 @@
+{
+  "name": "@blinkorb/eslint-config",
+  "version": "0.0.0",
+  "description": "A collection of BlinkOrb's ESLint configs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blinkorb/eslint-config.git"
+  },
+  "keywords": [
+    "blinkorb",
+    "eslint",
+    "config",
+    "react",
+    "expo"
+  ],
+  "author": "BlinkOrb Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blinkorb/eslint-config/issues"
+  },
+  "homepage": "https://github.com/blinkorb/eslint-config#readme"
+}
