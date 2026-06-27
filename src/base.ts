@@ -1,10 +1,10 @@
 // https://docs.expo.dev/guides/using-eslint/
 import eslintJs from '@eslint/js';
 import { defineConfig } from 'eslint/config';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import prettierRecommended from 'eslint-plugin-prettier/recommended';
-import tseslint from 'typescript-eslint';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
+import { configs as tseslintConfigs } from 'typescript-eslint';
 
 export default defineConfig([
   {
@@ -35,7 +35,7 @@ export default defineConfig([
   {
     name: '@blinkorb/typescript-setup',
     files: ['**/*.{js,jsx,cjs,mjs,es,ts,tsx,mts,mtsx}'],
-    extends: [tseslint.configs.recommended],
+    extends: [tseslintConfigs.recommended],
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: '/',
