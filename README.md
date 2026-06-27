@@ -7,20 +7,20 @@
 ### Install
 
 ```bash
-npm i @blinkorb/eslint-config -D
+npm i eslint/config @blinkorb/eslint-config -D
 ```
 
 ### Configure
 
-Copy and paste the following and delete as appropriate:
+Copy and paste the following into your `eslint.config.ts` and delete as appropriate:
 
 ```ts
 import { defineConfig } from 'eslint/config';
 
-import base from './src/base';
-import expo from './src/expo';
-import jest from './src/jest';
-import react from './src/react';
+import base from '@blinkorb/eslint-config/base';
+import expo from '@blinkorb/eslint-config/expo';
+import jest from '@blinkorb/eslint-config/jest';
+import react from '@blinkorb/eslint-config/react';
 
 export default defineConfig([base, react, expo, jest]);
 ```
