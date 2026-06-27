@@ -7,7 +7,7 @@
 ### Install
 
 ```bash
-npm i eslint/config @blinkorb/eslint-config -D
+npm i eslint prettier typescript @blinkorb/eslint-config -D
 ```
 
 ### Configure
