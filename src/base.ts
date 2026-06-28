@@ -290,6 +290,7 @@ export default defineConfig([
         'addEventListener',
         'removeEventListener',
       ],
+      'prefer-const': 2,
     },
   },
   {
