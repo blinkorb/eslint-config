@@ -1,6 +1,6 @@
 {
   "name": "@blinkorb/eslint-config",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "publishConfig": {
     "access": "public"
   },
@@ -18,7 +18,8 @@
     "format-fix": "prettier --write .",
     "type-check": "tsc --noEmit",
     "lint-fail": "./scripts/lint-fail.sh",
-    "test": "npm run format-check && npm run type-check && npm run lint-check && npm run lint-fail"
+    "test": "npm run format-check && npm run type-check && npm run lint-check && npm run lint-fail",
+    "inspect": "eslint --inspect-config"
   },
   "repository": {
     "type": "git",
@@ -55,5 +56,8 @@
     "eslint": "^9.39.4",
     "prettier": "^3.9.0",
     "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^3.0.4"
   }
 }

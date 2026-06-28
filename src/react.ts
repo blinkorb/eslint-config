@@ -3,6 +3,8 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
+import { modifyConfigs, transformWarnToError } from './utils/modify';
+
 export default defineConfig([
   {
     ...reactPlugin.configs.flat['recommended'],
@@ -16,7 +18,7 @@ export default defineConfig([
       },
     },
   },
-  reactHooks.configs.flat.recommended,
+  modifyConfigs(reactHooks.configs.flat.recommended, transformWarnToError),
   {
     name: '@blinkorb/react',
     rules: {
