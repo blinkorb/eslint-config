@@ -294,15 +294,6 @@ export default defineConfig([
         'removeEventListener',
       ],
       'simple-import-sort/imports': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': [
-        'error',
-        {
-          // additionalHooks: '(useRequestAnimationFrame)',
-        },
-      ],
-      'react/prop-types': 0,
-      'react/no-unescaped-entities': 0,
     },
   },
   {
