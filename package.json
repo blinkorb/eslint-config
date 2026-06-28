@@ -12,12 +12,13 @@
     "./jest": "./src/jest.ts"
   },
   "scripts": {
-    "lint-check": "eslint .",
+    "lint-check": "eslint . --ignore-pattern='test-files/**/*-fail.ts'",
     "lint-fix": "npm run lint-check -- --fix",
     "format-check": "prettier --check .",
     "format-fix": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "test": "npm run format-check && npm run type-check && npm run lint-check"
+    "lint-fail": "./scripts/lint-fail.sh",
+    "test": "npm run format-check && npm run type-check && npm run lint-check && npm run lint-should-fail"
   },
   "repository": {
     "type": "git",
