@@ -18,7 +18,7 @@
     "format-fix": "prettier --write .",
     "type-check": "tsc --noEmit",
     "lint-fail": "./scripts/lint-fail.sh",
-    "test": "npm run format-check && npm run type-check && npm run lint-check && npm run lint-should-fail"
+    "test": "npm run format-check && npm run type-check && npm run lint-check && npm run lint-fail"
   },
   "repository": {
     "type": "git",
