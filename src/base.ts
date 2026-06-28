@@ -83,12 +83,9 @@ export default defineConfig([
       'no-unreachable': 2,
       'no-unused-vars': [2, { varsIgnorePattern: '^_\\w' }],
       'no-use-before-define': 2,
-
       radix: 2,
-      curly: 2,
       'no-fallthrough': 2,
       'default-case': 2,
-
       'no-var': 2,
       'no-unused-expressions': 2,
       camelcase: [
@@ -312,4 +309,10 @@ export default defineConfig([
     },
   },
   prettierRecommended,
+  {
+    name: '@blinkorb/formatting',
+    rules: {
+      curly: 2,
+    },
+  },
 ]);
