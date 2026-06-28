@@ -293,7 +293,6 @@ export default defineConfig([
         'addEventListener',
         'removeEventListener',
       ],
-      'simple-import-sort/imports': 'error',
     },
   },
   {
