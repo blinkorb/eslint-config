@@ -83,12 +83,9 @@ export default defineConfig([
       'no-unreachable': 2,
       'no-unused-vars': [2, { varsIgnorePattern: '^_\\w' }],
       'no-use-before-define': 2,
-
       radix: 2,
-      curly: 2,
       'no-fallthrough': 2,
       'default-case': 2,
-
       'no-var': 2,
       'no-unused-expressions': 2,
       camelcase: [
@@ -293,16 +290,7 @@ export default defineConfig([
         'addEventListener',
         'removeEventListener',
       ],
-      'simple-import-sort/imports': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': [
-        'error',
-        {
-          // additionalHooks: '(useRequestAnimationFrame)',
-        },
-      ],
-      'react/prop-types': 0,
-      'react/no-unescaped-entities': 0,
+      'prefer-const': 2,
     },
   },
   {
@@ -322,4 +310,10 @@ export default defineConfig([
     },
   },
   prettierRecommended,
+  {
+    name: '@blinkorb/formatting',
+    rules: {
+      curly: 2,
+    },
+  },
 ]);
