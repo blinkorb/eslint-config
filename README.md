@@ -19,14 +19,14 @@ Note: you may need to install `jiti` to use `.ts` extension on your `eslint.conf
 ```ts
 import { defineConfig } from 'eslint/config';
 
-import base from './src/base';
-import expo from './src/expo';
-import importExtensions from './src/import-extensions';
-import jest from './src/jest';
-import nodeImportPrefix from './src/node-import-prefix';
-import react from './src/react';
-import tailwind from './src/tailwind';
-import typeorm from './src/typeorm';
+import base from '@blinkorb/eslint-config/base';
+import expo from '@blinkorb/eslint-config/expo';
+import importExtensions from '@blinkorb/eslint-config/import-extensions';
+import jest from '@blinkorb/eslint-config/jest';
+import nodeImportPrefix from '@blinkorb/eslint-config/node-import-prefix';
+import react from '@blinkorb/eslint-config/react';
+import tailwind from '@blinkorb/eslint-config/tailwind';
+import typeorm from '@blinkorb/eslint-config/typeorm';
 
 export default defineConfig([
   base,

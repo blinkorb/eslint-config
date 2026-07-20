@@ -1,6 +1,6 @@
 {
   "name": "@blinkorb/eslint-config",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "publishConfig": {
     "access": "public"
   },
@@ -9,7 +9,11 @@
     "./base": "./src/base.ts",
     "./react": "./src/react.ts",
     "./expo": "./src/expo.ts",
-    "./jest": "./src/jest.ts"
+    "./jest": "./src/jest.ts",
+    "./typeorm": "./src/typeorm.ts",
+    "./import-extensions": "./src/import-extensions.ts",
+    "./node-import-prefix": "./src/node-import-prefix.ts",
+    "./tailwind": "./src/tailwind.ts"
   },
   "scripts": {
     "lint-check": "eslint . --ignore-pattern='test-files/**/*-fail.{ts,tsx,js,jsx}'",
