@@ -13,7 +13,8 @@
     "./typeorm": "./src/typeorm.ts",
     "./import-extensions": "./src/import-extensions.ts",
     "./node-import-prefix": "./src/node-import-prefix.ts",
-    "./tailwind": "./src/tailwind.ts"
+    "./tailwind": "./src/tailwind.ts",
+    "./next": "./src/next.ts"
   },
   "scripts": {
     "lint-check": "eslint . --ignore-pattern='test-files/**/*-fail.{ts,tsx,js,jsx}'",
