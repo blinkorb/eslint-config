@@ -48,8 +48,4 @@ const rule: Rule.RuleModule = {
   },
 };
 
-export default {
-  rules: {
-    'node-import-prefix': rule,
-  },
-};
+export default rule;

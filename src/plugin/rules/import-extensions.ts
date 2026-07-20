@@ -98,8 +98,4 @@ const rule: Rule.RuleModule = {
   },
 };
 
-export default {
-  rules: {
-    'import-extensions': rule,
-  },
-};
+export default rule;
