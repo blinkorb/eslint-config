@@ -11,14 +11,20 @@ export default defineConfig([
     name: '@blinkorb/ignores',
     ignores: [
       'node_modules',
+      // expo
       '.expo',
       'android',
       'ios',
-      'coverage',
-      'build',
       'expo-env.d.ts',
-      'dist',
+      // next
+      '.next',
       'out',
+      'next-env.d.ts',
+      // tests
+      'coverage',
+      // general builds stuff
+      'build',
+      'dist',
     ],
   },
   eslintJs.configs.recommended,
