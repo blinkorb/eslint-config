@@ -14,6 +14,8 @@ npm i eslint prettier typescript @blinkorb/eslint-config -D
 
 Copy and paste the following into your `eslint.config.ts` and delete as appropriate:
 
+Note: you may need to install `jiti` to use `.ts` extension on your `eslint.config`.
+
 ```ts
 import { defineConfig } from 'eslint/config';
 
