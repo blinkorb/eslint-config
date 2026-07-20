@@ -59,6 +59,7 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^3.0.4"
+    "@eslint/config-inspector": "^3.0.4",
+    "react": "^19.2.7"
   }
 }
