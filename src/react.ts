@@ -3,7 +3,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-import { modifyConfigs, transformWarnToError } from './utils/modify';
+import { modifyConfigs, transformWarnToError } from './utils/modify.ts';
 
 export default defineConfig([
   {

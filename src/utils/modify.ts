@@ -1,6 +1,6 @@
 import { Config } from 'eslint/config';
 
-import { AnyArray, AnyConfig } from '../types';
+import { AnyArray, AnyConfig } from '../types.ts';
 
 const isArray = <T>(input: T): input is Extract<T, AnyArray> =>
   Array.isArray(input);

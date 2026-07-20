@@ -16,10 +16,11 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": false,
+    "allowImportingTsExtensions": true,
     "target": "ESNext",
     "module": "Preserve",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "types": ["node"]
   },
-  "include": ["src/**/*", "eslint.config.ts"]
+  "include": ["src/**/*", "./test-files/**/*", "eslint.config.ts"]
 }

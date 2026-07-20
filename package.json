@@ -1,6 +1,6 @@
 {
   "name": "@blinkorb/eslint-config",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publishConfig": {
     "access": "public"
   },
@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/blinkorb/eslint-config#readme",
   "dependencies": {
+    "@types/estree": "^1.0.9",
     "@typescript-eslint/eslint-plugin": "^8.62.0",
     "@typescript-eslint/parser": "^8.62.0",
     "eslint-config-expo": "^56.0.4",
@@ -58,6 +59,8 @@
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^3.0.4"
+    "@eslint/config-inspector": "^3.0.4",
+    "@types/node": "^22.20.1",
+    "react": "^19.2.7"
   }
 }
