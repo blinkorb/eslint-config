@@ -1,5 +1,5 @@
-import importExtensions from './rules/import-extensions';
-import nodeImportPrefix from './rules/node-import-prefix';
+import importExtensions from './rules/import-extensions.ts';
+import nodeImportPrefix from './rules/node-import-prefix.ts';
 
 const plugin = {
   rules: {

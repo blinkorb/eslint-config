@@ -16,7 +16,7 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": false,
+    "allowImportingTsExtensions": true,
     "target": "ESNext",
     "module": "Preserve",
     "moduleResolution": "Bundler"

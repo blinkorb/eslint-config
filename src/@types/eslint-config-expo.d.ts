@@ -1,5 +1,5 @@
 declare module 'eslint-config-expo/flat' {
-  import { AnyConfig } from '../types';
+  import { AnyConfig } from '../types.ts';
 
   const config: AnyConfig;
 
