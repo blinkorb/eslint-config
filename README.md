@@ -40,7 +40,7 @@ export default defineConfig([
   {
     settings: {
       'better-tailwindcss': {
-        entryPoint: './test-files/globals.css',
+        entryPoint: './path/to/your/globals.css',
       },
     },
   },
