@@ -10,7 +10,7 @@ const validateSource = (
   node: ImportDeclaration | ImportExpression
 ) => {
   const value =
-    node.source.type === 'Literal' && node.source.value === 'string'
+    node.source.type === 'Literal' && typeof node.source.value === 'string'
       ? node.source.value
       : null;
 
