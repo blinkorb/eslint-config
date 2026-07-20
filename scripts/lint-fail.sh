@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 root="$(dirname "$0")/.."
-shopt -s nullglob
 status=0
-for f in "$root"/test-files/*-fail.{ts,tsx,js,jsx}; do
+while IFS= read -r -d '' f; do
   output=$(eslint "$f" 2>&1)
   if echo "$output" | grep -qE '✖ 1 problem \(1 error,'; then
     echo "Successfully failed exactly once: $f"
@@ -14,5 +13,5 @@ for f in "$root"/test-files/*-fail.{ts,tsx,js,jsx}; do
     echo "----------------------------------------"
     status=1
   fi
-done
+done < <(find "$root"/test-files \( -name '*-fail.ts' -o -name '*-fail.tsx' -o -name '*-fail.js' -o -name '*-fail.jsx' \) -type f -print0)
 exit $status

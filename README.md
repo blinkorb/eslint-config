@@ -23,6 +23,7 @@ import base from '@blinkorb/eslint-config/base';
 import expo from '@blinkorb/eslint-config/expo';
 import importExtensions from '@blinkorb/eslint-config/import-extensions';
 import jest from '@blinkorb/eslint-config/jest';
+import next from '@blinkorb/eslint-config/next';
 import nodeImportPrefix from '@blinkorb/eslint-config/node-import-prefix';
 import react from '@blinkorb/eslint-config/react';
 import tailwind from '@blinkorb/eslint-config/tailwind';
@@ -37,10 +38,16 @@ export default defineConfig([
   importExtensions,
   nodeImportPrefix,
   tailwind,
+  next,
   {
     settings: {
       'better-tailwindcss': {
-        entryPoint: './path/to/your/globals.css',
+        // if using tailwind
+        entryPoint: './path/to/globals.css',
+      },
+      next: {
+        // if using next in a monorepo
+        rootDir: './path/to/workspace/',
       },
     },
   },
