@@ -78,3 +78,8 @@ export const modifyConfigs = (
 
   return callback(config);
 };
+
+export const compose =
+  (...callbacks: readonly ((config: Config) => Config)[]) =>
+  (config: Config) =>
+    callbacks.reduce((acc, callback) => callback(acc), config);
