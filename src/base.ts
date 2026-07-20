@@ -6,6 +6,8 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import { configs as tseslintConfigs } from 'typescript-eslint';
 
+import { createRemoveRule, modifyConfigs } from './utils/modify.ts';
+
 export default defineConfig([
   {
     name: '@blinkorb/ignores',
@@ -41,7 +43,12 @@ export default defineConfig([
   {
     name: '@blinkorb/typescript-setup',
     files: ['**/*.{js,jsx,cjs,mjs,es,ts,tsx,mts,mtsx}'],
-    extends: [tseslintConfigs.recommended],
+    extends: [
+      modifyConfigs(
+        tseslintConfigs.recommended,
+        createRemoveRule('@typescript-eslint/no-unused-vars')
+      ),
+    ],
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: '/',
@@ -98,13 +105,6 @@ export default defineConfig([
           allow: ['^UNSAFE_', 'call_id'],
         },
       ],
-      '@typescript-eslint/no-explicit-any': 2,
-      '@typescript-eslint/explicit-function-return-type': 0,
-      '@typescript-eslint/member-delimiter-style': 0,
-      '@typescript-eslint/type-annotation-spacing': 0,
-      '@typescript-eslint/no-unused-vars': [2, { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-use-before-define': 2,
-      '@typescript-eslint/no-shadow': 2,
       'no-restricted-globals': [
         'error',
         'URL',
@@ -297,8 +297,8 @@ export default defineConfig([
     },
   },
   {
-    name: '@blinkorb/typescript-overrides',
-    files: ['**/*.ts', '**/*.tsx'],
+    name: '@blinkorb/typescript',
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.mtsx', '**/*.d.ts'],
     rules: {
       'no-undef': 'off',
       'no-unused-vars': 'off',
@@ -307,9 +307,16 @@ export default defineConfig([
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/member-delimiter-style': 'off',
       '@typescript-eslint/type-annotation-spacing': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-use-before-define': 'error',
       '@typescript-eslint/no-shadow': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
   prettierRecommended,
