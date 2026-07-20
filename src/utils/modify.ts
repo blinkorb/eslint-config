@@ -57,6 +57,17 @@ export const createRenamePlugin = (originalName: string, newName: string) => {
   };
 };
 
+export const createRemoveRule = (ruleName: string) => (config: Config) => {
+  return {
+    ...config,
+    rules: {
+      ...Object.fromEntries(
+        Object.entries(config.rules ?? {}).filter(([key]) => key !== ruleName)
+      ),
+    },
+  };
+};
+
 export const modifyConfigs = (
   config: AnyConfig,
   callback: (config: Config) => Config
