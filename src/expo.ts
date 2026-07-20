@@ -4,6 +4,16 @@
 import { defineConfig } from 'eslint/config';
 import expoConfig from 'eslint-config-expo/flat';
 
-import { modifyConfigs, transformWarnToError } from './utils/modify.ts';
+import {
+  compose,
+  createRemoveRule,
+  modifyConfigs,
+  transformWarnToError,
+} from './utils/modify.ts';
 
-export default defineConfig(modifyConfigs(expoConfig, transformWarnToError));
+const modifications = compose(
+  createRemoveRule('@typescript-eslint/no-unused-vars'),
+  transformWarnToError
+);
+
+export default defineConfig(modifyConfigs(expoConfig, modifications));

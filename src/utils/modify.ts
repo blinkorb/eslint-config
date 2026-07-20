@@ -57,6 +57,17 @@ export const createRenamePlugin = (originalName: string, newName: string) => {
   };
 };
 
+export const createRemoveRule = (ruleName: string) => (config: Config) => {
+  return {
+    ...config,
+    rules: {
+      ...Object.fromEntries(
+        Object.entries(config.rules ?? {}).filter(([key]) => key !== ruleName)
+      ),
+    },
+  };
+};
+
 export const modifyConfigs = (
   config: AnyConfig,
   callback: (config: Config) => Config
@@ -67,3 +78,8 @@ export const modifyConfigs = (
 
   return callback(config);
 };
+
+export const compose =
+  (...callbacks: readonly ((config: Config) => Config)[]) =>
+  (config: Config) =>
+    callbacks.reduce((acc, callback) => callback(acc), config);
