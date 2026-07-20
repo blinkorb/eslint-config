@@ -8,7 +8,6 @@ const isArray = <T>(input: T): input is Extract<T, AnyArray> =>
 export const transformWarnToError = (config: Config): Config => ({
   ...config,
   rules: {
-    ...config.rules,
     ...Object.fromEntries(
       Object.entries(config.rules ?? {}).map(([key, value]) => {
         if (value === 'warn' || value === 1) {
