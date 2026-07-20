@@ -17,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
     "target": "ESNext",
     "module": "Preserve",
     "moduleResolution": "Bundler",

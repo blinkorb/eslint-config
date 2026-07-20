@@ -7,6 +7,7 @@ import importExtensions from './src/import-extensions';
 import jest from './src/jest';
 import nodeImportPrefix from './src/node-import-prefix';
 import react from './src/react';
+import tailwind from './src/tailwind';
 import typeorm from './src/typeorm';
 
 export default defineConfig([
@@ -17,4 +18,12 @@ export default defineConfig([
   typeorm,
   importExtensions,
   nodeImportPrefix,
+  tailwind,
+  {
+    settings: {
+      'better-tailwindcss': {
+        entryPoint: './test-files/globals.css',
+      },
+    },
+  },
 ]);
