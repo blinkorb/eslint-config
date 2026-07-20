@@ -28,6 +28,35 @@ export const transformWarnToError = (config: Config): Config => ({
   },
 });
 
+export const createRenamePlugin = (originalName: string, newName: string) => {
+  const matchesOriginalNameRule = new RegExp(`^${originalName}/`);
+
+  return (config: Config) => {
+    return {
+      ...config,
+      plugins: {
+        ...Object.fromEntries(
+          Object.entries(config.plugins ?? {}).map(([key, value]) => {
+            if (key === originalName) {
+              return [newName, value];
+            }
+
+            return [key, value];
+          })
+        ),
+      },
+      rules: {
+        ...Object.fromEntries(
+          Object.entries(config.rules ?? {}).map(([key, value]) => [
+            key.replace(matchesOriginalNameRule, `${newName}/`),
+            value,
+          ])
+        ),
+      },
+    };
+  };
+};
+
 export const modifyConfigs = (
   config: AnyConfig,
   callback: (config: Config) => Config
